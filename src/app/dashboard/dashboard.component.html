@@ -1,0 +1,8 @@
+<h3><u>Top Notes</u></h3>
+<div class="grid grid-pad">
+  <a *ngFor="let item of notes" class="col-1-4" routerLink="/detail/{{item._id}}" placement="bottom" ngbTooltip="Read Note">
+    <div class="module">
+      <h6>{{item.title}}</h6>
+    </div>
+  </a>
+</div>

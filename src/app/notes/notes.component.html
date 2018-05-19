@@ -1,0 +1,17 @@
+<h2>My Notes</h2>
+<p>List of Notes from MongoDB</p>
+<p>
+  <button type="button" class="btn btn-primary" placement="right" ngbTooltip="add new note">
+    <i class="fas fa-plus"></i>
+  </button>
+</p>
+
+<ul class="notes">
+  <li *ngFor="let item of notes; let i = index">
+    <a routerLink="/detail/{{item._id}}" placement="top" ngbTooltip="Read Note">
+      <span class="badge">{{i+1}}</span>
+      <span class="title">{{item.title}}</span>
+    </a>
+    <button class="delete" placement="right" ngbTooltip="Delete Note" (click)="delete(item)">x</button>
+  </li>
+</ul>
